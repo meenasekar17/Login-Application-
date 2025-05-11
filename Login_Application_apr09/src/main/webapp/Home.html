@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Welcome Page</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0056b3; /* #f4f4f9*/
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    max-width: 1000px;
+    height: 60%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.left-side, .right-side {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side {
+    background-color: #f4f4f9;
+}
+
+.left-side h1 {
+    color: #007bff;
+    font-size: 36px;
+    margin: 0;
+}
+
+.right-side {
+    background-color: #f4f4f9;
+    gap: 20px;
+    align-items: center;
+}
+
+.main {
+    background-color: #007bff;
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.main:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-side, .right-side {
+        align-items: center;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-side">
+        <h1>Welcome To Our</h1>
+         <h1 style="text-align: center;">Website</h1>
+    </div>
+    <div class="right-side">
+        <div class="main"><a href="login.html">Admin Login</a></div>
+        <div class="main"><a href="clogin.html">Customer Login</a></div>
+    </div>
+</div>
+
+</body>
+</html>

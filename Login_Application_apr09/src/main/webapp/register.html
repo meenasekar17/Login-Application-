@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Create Account</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.main {
+    width: 40%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.input-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    user-select: none;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+span {
+    font-weight: bold;
+    color: #333;
+}
+</style>
+</head>
+<body>
+
+<h1>Create an Account</h1>
+
+<div class="main">
+    <form action="register" method="post">
+        <table>
+            <tr>
+                <td><span>Full Name</span></td>
+                <td><input type="text" name="fname" required></td>
+            </tr>
+            <tr>
+                <td><span>Email-id</span></td>
+                <td><input type="text" name="mid" required></td>
+            </tr>
+            <tr>
+                <td><span>Phone No</span></td>
+                <td><input type="text" name="pno" required></td>
+            </tr>
+            <tr>
+                <td><span>Password</span></td>
+                <td>
+                    <div class="input-group">
+                        <input type="password" name="rpwd" id="rpwd" required>
+                        <span class="toggle-password" onclick="togglePassword('rpwd')">👁️</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><span>Confirm Password</span></td>
+                <td>
+                    <div class="input-group">
+                        <input type="password" name="cpwd" id="cpwd" required>
+                        <span class="toggle-password" onclick="togglePassword('cpwd')">👁️</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+function togglePassword(id) {
+    const input = document.getElementById(id);
+    if (input.type === "password") {
+        input.type = "text";
+    } else {
+        input.type = "password";
+    }
+}
+</script>
+
+</body>
+</html>

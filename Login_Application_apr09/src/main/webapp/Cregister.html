@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Customer Register</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #eef2f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .main {
+       background-color: #ffffff;
+        width: 40%; /* Adjusted width for a rectangular shape */
+        max-width: 500px;
+        height: 500px; /* Rectangular height */
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 25px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus,
+    input[type="email"]:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 25px;
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+        transform: scale(1.03);
+    }
+</style>
+</head>
+<body>
+<div class="main">
+    <form action="cregister" method="post">
+        <h1>Customer Register</h1>
+        <table>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="uname" placeholder="Enter username" required></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="pwd" placeholder="Enter password" required></td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="fname" placeholder="Enter First name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="lname" placeholder="Enter Last name" required></td>
+            </tr>
+            <tr>
+                <td>Gmail ID</td>
+                <td><input type="email" name="mid" placeholder="Enter mail id" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="text" name="pno" placeholder="Enter phone number" required></td>
+            </tr>
+        </table>
+        <input type="submit" value="Register" class="btn">
+    </form>
+</div>
+</body>
+</html>
